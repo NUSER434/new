@@ -19,4 +19,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Report::class);
     }
+
+    public function fullName()
+    {
+        return $this->name . ' ' . $this->middle_name . ' ' . $this->last_name;
+    }
 }
